@@ -1,5 +1,5 @@
 # Arduino Robotic Arm
-My project is an Arduino-controlled robotic arm that uses servo motors and a joystick to move its joints. I am building it from a kit while learning how mechanical parts, wiring, and Arduino code work together to create controlled movement. I will document the testing, assembly challenges, and improvements I make as the arm becomes a working system.
+This project is an Arduino-controlled robotic arm designed to perform several basic arm movements through a custom joystick controller. Four motors control the system: two move the arm’s joints, one rotates the base, and one opens and closes the gripper. The Arduino board receives input from a homemade controller with two joysticks, allowing the arm to move in multiple directions.
 
 You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
 ```HTML 
