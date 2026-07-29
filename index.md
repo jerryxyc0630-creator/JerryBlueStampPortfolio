@@ -76,8 +76,8 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| 1 MG90S servo | Drive the base | $5 | <a href="https://www.pishop.us/product/mg90s-micro-servo-metal-gear/"> Link </a> |
+| 3 SG90 servo | Drive the robotic arm | $Price | <a href="https://www.amazon.com/AILUOMI-Micro-Compatible-Arduino-Raspberry/dp/B0G4W4X1H9/ref=sr_1_3?crid=2U7CJFDKN8D5Y&dib=eyJ2IjoiMSJ9.CTzwxdFnBiabc1f6Sr4-oNBaOr_JUXNPRiwmRLsQzgM9eKt7OxGLjeVWd6C6PLbj8L-9ns4AzKjWEwetsdtPr_c6VFSvlh-KEqixO_n82jVvoMZHV55FtN8PG6XQ_FpQQvD5OrDG41-2ixtWP5rFAIXU8_glfgHFkzU0ZQCv4_64-WT1qVkFbCTvzCMmKlrmi8D__CidRkyGjWr8-trYriBRBDwQT0MFw0p7poScHSLBljUEJ4wBwZXzXk8iWCRmw9tIzruQAdfc8RhzCIoTZ9_0JsJ3IKasvC34E469Ld8.lXiu7l-BFjcLor_8p_zC4q2Rp6Fg4T_Dxz2SlaLf0pI&dib_tag=se&keywords=one+SG90&qid=1785336540&s=toys-and-games&sprefix=one+sg90%2Ctoys-and-games%2C155&sr=1-3"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 
 # Other Resources/Examples
