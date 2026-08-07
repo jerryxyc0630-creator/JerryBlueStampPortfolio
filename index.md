@@ -42,6 +42,26 @@ The main challenge was servo calibration. At first, the physical arm parts were 
 
 This milestone focuses on completing and testing the original robotic arm system. At this stage, there was no added breadboard control board, extra buttons, LEDs, or custom control modes.
 
+# Final Milestone
+
+<!-- Add the Final Milestone YouTube embed here after the video is uploaded. -->
+
+Since the second milestone, the original robotic-arm control system has been upgraded with a custom breadboard control board. The completed system uses three buttons and three LEDs in addition to the two-joystick handheld controller. The four servo motors control the base, lower arm joint, upper arm joint, and claw.
+
+Two operating modes were added. In Mode 1, each joystick axis controls a separate part of the arm, allowing more precise movement of the base, lower joint, upper joint, and claw. In Mode 2, one joystick controls the two main arm joints together, making it easier to extend or retract the arm. When Mode 2 is selected, the two arm joints return to their calibrated starting positions. The mode LED is on in Mode 1 and off in Mode 2.
+
+A recording and playback system was also added. Pressing the record button starts saving the positions of all four servos every 0.25 seconds. The recording LED flashes during the first five seconds and flashes faster during the final five seconds. Recording is limited to ten seconds because the Arduino Nano has limited memory. Pressing the record button again saves the movement and keeps the LED on; pressing it one more time deletes the saved recording. The play button makes the arm repeat the saved sequence while the playback LED is on.
+
+The largest challenge was servo calibration. The program can command each servo to move to a specific angle, but the physical servo horns and arm parts must also be installed at matching angles. Incorrect alignment initially caused the arm to move into unsafe positions when powered on. Centering the servos, reinstalling the servo horns, and realigning the mechanical parts solved this problem.
+
+This project demonstrated how mechanical design, circuits, and programming work together in one system. Important topics included reading analog joystick input, controlling servo angles, using digital buttons and LEDs, managing limited Arduino memory, and debugging a physical system.
+
+In the future, the system could be expanded to store longer recordings and multiple separate actions. A number display could show the selected action, allowing the user to choose and replay different saved routines.
+
+# Schematics
+
+[View the complete robotic-arm wiring schematic (PDF)](Epic%20Blad.pdf)
+
 # Wiring Summary
 
 | **Component** | **Arduino Pin(s)** | **Purpose** |
