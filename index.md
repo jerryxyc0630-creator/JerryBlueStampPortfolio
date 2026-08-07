@@ -1,89 +1,134 @@
 # Arduino Robotic Arm
-This project is an Arduino-controlled robotic arm designed to perform several basic arm movements through a custom joystick controller. Four motors control the system: two move the arm’s joints, one rotates the base, and one opens and closes the gripper. The Arduino board receives input from a homemade controller with two joysticks, allowing the arm to move in multiple directions.
 
-You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
-```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
-```
+This Arduino-controlled robotic arm uses four servo motors: two move the main arm joints, one rotates the base, and one opens and closes the claw. It is controlled by a custom handheld controller with two joysticks and a separate breadboard control board with three buttons and three LEDs. The system supports two manual-control modes as well as a short record-and-playback function.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
-|:--:|:--:|:--:|:--:|
-| Jerry Xiang | Portola High | Electrical Engineering | 11th
+| :----------: | :--------: | :------------------: | :-------: |
+| Jerry Xiang | Portola High | Electrical Engineering | 11th |
 
-**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
+<!--
+## Project Photo
 
-![Headstone Image](logo.svg)
-  
-# Final Milestone
+Add a photo of Jerry and the completed robotic arm here after uploading the image file to this branch.
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
-
-
-
-# Second Milestone
-
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
+![Completed Arduino robotic arm](project-photo.jpg)
+-->
 
 # First Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vh_s0m1IfjQ" title="First Milestone Video: Robotic Arm Assembly" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-The project is an Arduino-controlled robotic arm that has been fully assembled and connected to its main circuit. It uses four servo motors: two control the arm joints, one rotates the base, and one opens and closes the gripper. A custom controller with two analog joysticks will provide input for these movements.
+At this milestone, the physical structure of the robotic arm had been fully assembled and connected to its main circuit. The arm uses four servo motors: two control the arm joints, one rotates the base, and one opens and closes the claw. A custom controller with two analog joysticks provides input for these movements.
 
-This milestone video presents the completed physical structure of the robotic arm and explains how the arm will move after programming. The small screws made assembly difficult because they were hard to hold in place, so a magnetic screwdriver was used to keep them attached to the screwdriver during installation.
+This video presents the completed physical structure of the robotic arm and explains how the arm will move after programming. The small screws made assembly difficult because they were hard to hold in place, so a magnetic screwdriver was used to keep them attached during installation.
 
-The next step is to program and test the control system. The completed project will support direct manual control through the joysticks and a preset automatic routine that moves lightweight objects between two fixed locations.
+The next step was to program and test the control system, including direct joystick control and a record-and-playback routine.
 
-# Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+# Second Milestone
+
+<!--
+Add the Second Milestone YouTube embed here after the video is uploaded.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="Second Milestone Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+-->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cyYA59lS46Y" title="Second Milestone Video: Original Robotic Arm Control System" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Since the first milestone, the robotic arm has been programmed and tested using the original Cokoino control system. The system uses a custom handheld controller with two joysticks and four servo motors. One servo rotates the base, two servos move the main arm joints together, and the final servo opens and closes the claw.
+
+In the original control layout, one joystick controls the coordinated movement of the two arm joints and the rotation of the base. The other joystick controls the claw and the original recording functions. The program can save up to ten arm positions and replay them in sequence.
+
+The main challenge was servo calibration. At first, the physical arm parts were not aligned with the servos’ programmed starting angles, causing the arm to move into incorrect positions when powered on. Each servo was centered, the servo horns were reinstalled, and the mechanical parts were aligned so that the arm could start and move safely.
+
+This milestone focuses on completing and testing the original robotic arm system. At this stage, there was no added breadboard control board, extra buttons, LEDs, or custom control modes.
+
+# Wiring Summary
+
+| **Component** | **Arduino Pin(s)** | **Purpose** |
+| :----------- | :---------------- | :---------- |
+| Base servo | D4 | Rotates the base |
+| Lower arm servo | D5 | Moves the lower arm joint |
+| Upper arm servo | D6 | Moves the upper arm joint |
+| Claw servo | D7 | Opens and closes the claw |
+| Mode button | D8 | Switches between Mode 1 and Mode 2 |
+| Record button | D9 | Starts, saves, and deletes a recording |
+| Play button | D10 | Replays the saved movement |
+| Mode LED | D11 | On for Mode 1; off for Mode 2 |
+| Recording LED | D12 | Shows recording and saved-recording status |
+| Playback LED | D13 | Turns on during playback |
+| Two joystick modules | A0–A3 | Sends four analog control signals |
+
+<!--
+Add a wiring-diagram image here after exporting and uploading it to this branch.
+-->
 
 # Code
-Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
+
+The Arduino program uses the CokoinoArm library to read joystick input, control the four servos, switch between operating modes, and store a short sequence of servo positions for playback.
 
 ```c++
+#include "src/CokoinoArm.h"
+
+CokoinoArm arm;
+
+const byte MODE_BUTTON_PIN   = 8;
+const byte RECORD_BUTTON_PIN = 9;
+const byte PLAY_BUTTON_PIN   = 10;
+
+const byte MODE_LED_PIN   = 11;
+const byte RECORD_LED_PIN = 12;
+const byte PLAY_LED_PIN   = 13;
+
+const unsigned long RECORD_LIMIT_MS = 10000UL;
+const unsigned long SAMPLE_INTERVAL = 250UL;
+const byte MAX_FRAMES = 40;
+
 void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
+  // D4 base, D5 lower joint, D6 upper joint, D7 claw
+  arm.ServoAttach(4, 5, 6, 7);
+
+  // Two joystick modules
+  arm.JoyStickAttach(A1, A0, A3, A2);
+
+  pinMode(MODE_BUTTON_PIN, INPUT_PULLUP);
+  pinMode(RECORD_BUTTON_PIN, INPUT_PULLUP);
+  pinMode(PLAY_BUTTON_PIN, INPUT_PULLUP);
+
+  pinMode(MODE_LED_PIN, OUTPUT);
+  pinMode(RECORD_LED_PIN, OUTPUT);
+  pinMode(PLAY_LED_PIN, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  // Read joystick input.
+  // Control the arm in Mode 1 or Mode 2.
+  // Check the mode, record, and playback buttons.
+  // Save up to 40 servo-position frames for a maximum of 10 seconds.
 }
 ```
 
 # Bill of Materials
-Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
-Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
 
-| **Part** | **Note** | **Price** | **Link** |
-|:--:|:--:|:--:|:--:|
-| 1 MG90S servo | Drive the base | $5 | <a href="https://www.pishop.us/product/mg90s-micro-servo-metal-gear/"> Link </a> |
-| 3 SG90 servo | Drive the robotic arm | $Price | <a href="https://www.amazon.com/AILUOMI-Micro-Compatible-Arduino-Raspberry/dp/B0G4W4X1H9/ref=sr_1_3?crid=2U7CJFDKN8D5Y&dib=eyJ2IjoiMSJ9.CTzwxdFnBiabc1f6Sr4-oNBaOr_JUXNPRiwmRLsQzgM9eKt7OxGLjeVWd6C6PLbj8L-9ns4AzKjWEwetsdtPr_c6VFSvlh-KEqixO_n82jVvoMZHV55FtN8PG6XQ_FpQQvD5OrDG41-2ixtWP5rFAIXU8_glfgHFkzU0ZQCv4_64-WT1qVkFbCTvzCMmKlrmi8D__CidRkyGjWr8-trYriBRBDwQT0MFw0p7poScHSLBljUEJ4wBwZXzXk8iWCRmw9tIzruQAdfc8RhzCIoTZ9_0JsJ3IKasvC34E469Ld8.lXiu7l-BFjcLor_8p_zC4q2Rp6Fg4T_Dxz2SlaLf0pI&dib_tag=se&keywords=one+SG90&qid=1785336540&s=toys-and-games&sprefix=one+sg90%2Ctoys-and-games%2C155&sr=1-3"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| **Part** | **Quantity** | **Price** | **Link** |
+| :------- | :----------: | :-------: | :------- |
+| Robot Arm Kit | 1 | $45.00 | [Link](https://www.amazon.com/LK-COKOINO-Compliment-Engineering-Technology/dp/B081FG1JQ1) |
+| Servo Shield / Nano Sensor Shield V5.0 | 1 | $2.95 | [Link](https://protosupplies.com/product/sensor-shield-v5-0/) |
+| Magnetic Precision Screwdriver Kit | 1 | $4.75 | [Link](https://www.walmart.com/ip/Precision-Screwdriver-Set-25-in-1-Multi-Bit-Magnetic-Tool-Kit-Alloy-Steel-Bits-Non-Slip-Handle-Leather-Case-Mini-Portable-Repair-Glasses-Watches-Elec/19283665968) |
+| Electronics Kit | 1 | $12.79 | [Link](https://www.walmart.com/ip/Electronic-Component-Wires-Breadboard-LED-Buzzer-Resistor-Transistor-Starter-Set/936088703) |
+| 2 × 18650 Battery Holder with DC Barrel Plug | 1 | $13.78 | [Link](https://www.ebay.com/itm/406247835485) |
+| Digital Multimeter (DMM) | 1 | $9.99 | [Link](https://www.walmart.com/c/kp/digital-multimeter) |
+| 2 × 18650 Rechargeable Batteries | 1 set | $11.99 | [Link](https://www.ecogearfx.com/product/18650-rechargeable-lithium-ion-battery-2-pack/) |
+| **Total** |  | **$101.25** |  |
 
-# Other Resources/Examples
-One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
-- [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
+# Other Resources
 
-To watch the BSE tutorial on how to create a portfolio, click here.
+- [Cokoino CKK0006 robotic arm source code](https://github.com/Cokoino/CKK0006)
+- [Arduino Nano documentation](https://docs.arduino.cc/hardware/nano/)
+- [Arduino Servo library documentation](https://docs.arduino.cc/libraries/servo/)
+- [BlueStamp Engineering portfolio template](https://github.com/BlueStampEng/BSE_Template_Portfolio)
+
+<!--
+# Final Milestone
+
+This section will be added after the final presentation and video are complete.
+-->
